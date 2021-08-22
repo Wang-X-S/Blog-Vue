@@ -1,91 +1,21 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div id="register">
+    <h4>用户名</h4>
+    <el-input v-model="username" placeholder="用户名"></el-input>
+    <p class="error">当前用户名已注册</p>
+    <h4>密码</h4>
+    <el-input v-model="password" type="password" placeholder="密码"></el-input>
+    <p class="error">当前用户名已注册</p>
+    <el-button size="medium">立即注册</el-button>
+    <p class="notice">已有账号？
+      <router-link to="/login">立即登录</router-link>
+    </p>
   </div>
 </template>
 
 <script src="./template.js"></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="./template.css">
+<style scoped src="./template.scss" lang="scss">
 
 </style>

@@ -1,91 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div id="index">
+    <section class="blog-posts">
+      <div class="item">
+        <figure class="avatar">
+          <img src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400" alt="">
+          <figcaption>13君</figcaption>
+        </figure>
+        <h3>前端异步大揭秘 <span>3天前</span></h3>
+        <p>本文以一个简单的文件读写为例，讲解了异步的不同写法，包括 普通的 callback、ES2016中的Promise和Generator、 Node 用于解决回调的co 模块、ES2017中的async/await。适合初步接触 Node.js以及少量 ES6语法的同学阅读...</p>
+      </div>
+      <div class="item">
+        <figure class="avatar">
+          <img src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400" alt="">
+          <figcaption>13君</figcaption>
+        </figure>
+        <h3>前端异步大揭秘 <span>3天前</span></h3>
+        <p>本文以一个简单的文件读写为例，讲解了异步的不同写法，包括 普通的 callback、ES2016中的Promise和Generator、 Node 用于解决回调的co 模块、ES2017中的async/await。适合初步接触 Node.js以及少量 ES6语法的同学阅读...</p>
+      </div>
+    </section>
   </div>
 </template>
 
 <script src="./template.js"></script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src="./template.css">
-
-</style>
+<style scoped lang="scss" src="./template.scss"></style>
