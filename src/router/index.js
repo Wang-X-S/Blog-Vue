@@ -1,13 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Create from '@/pages/Create/template.vue'
-import Detail from '@/pages/Detail/template.vue'
-import Edit from '@/pages/Edit/template.vue'
-import Index from '@/pages/Index/template.vue'
-import Login from '@/pages/Login/template.vue'
-import My from '@/pages/My/template.vue'
-import Register from '@/pages/Register/template.vue'
-import User from '@/pages/User/template.vue'
+
 Vue.use(Router)
 import store from '../store'
 
@@ -16,45 +9,45 @@ const router = new Router({
     {
     path:'/',
     name:'Index',
-    component: Index
+    component: ()=>import('@/pages/Index/template.vue')
     },
     {
       path:'/login',
       name:'Login',
-      component: Login
+      component: ()=>import('@/pages/Login/template.vue')
     },
     {
       path:'/register',
       name:'Register',
-      component: Register
+      component: ()=>import('@/pages/Register/template.vue')
     },
     {
       path:'/user:blogId',
       name:'User',
-      component: User
+      component: ()=>import('@/pages/User/template.vue')
     },
     {
       path:'/create',
       name:'Create',
-      component: Create,
+      component: ()=>import('@/pages/Create/template.vue'),
       meta:{requiresAuth:true}
     },
     {
       path:'/detail:blogId',
       name:'Detail',
-      component: Detail,
+      component: ()=>import('@/pages/Detail/template.vue'),
       meta:{requiresAuth:true}
     },
     {
       path:'/edit:blogId',
       name:'Edit',
-      component: Edit,
+      component: ()=>import('@/pages/Edit/template.vue'),
       meta:{requiresAuth:true}
     },
     {
       path:'/my',
       name:'My',
-      component: My,
+      component: ()=>import('@/pages/My/template.vue'),
       meta:{requiresAuth:true}
     },
   ]
