@@ -22,7 +22,7 @@ const router = new Router({
       component: ()=>import('@/pages/Register/template.vue')
     },
     {
-      path:'/user:blogId',
+      path:'/user/:blogId',
       name:'User',
       component: ()=>import('@/pages/User/template.vue')
     },
@@ -33,13 +33,13 @@ const router = new Router({
       meta:{requiresAuth:true}
     },
     {
-      path:'/detail:blogId',
+      path:'/detail/:blogId',
       name:'Detail',
       component: ()=>import('@/pages/Detail/template.vue'),
       meta:{requiresAuth:true}
     },
     {
-      path:'/edit:blogId',
+      path:'/edit/:blogId',
       name:'Edit',
       component: ()=>import('@/pages/Edit/template.vue'),
       meta:{requiresAuth:true}

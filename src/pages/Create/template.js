@@ -10,22 +10,22 @@ window.blog = blog
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      atIndex:false,
+      title:'',
+      description:'',
+      content:''
+
     }
   },
 
   methods: {
-    onClick1() {
-      this.$message.error('错了哦，这是一条错误消息')
-    },
-
-    onClick2() {
-      this.$alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-          this.$message.success('点了确定')
-        }
-      })
+    onCreate(){
+      blog.createBlog({title:this.title,description:this.description,content:this.content,atIndex:this.atIndex})
+        .then(res=>{
+          this.$message.success(res.msg)
+          this.$router.push(`/detail/${res.data.id}`)
+        })
     }
   }
 }

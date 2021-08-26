@@ -9,7 +9,7 @@
       </div>
     </template>
     <template v-if="isLogin">
-      <h1>Let's share</h1>
+      <h1><router-link to="/">Let's share</router-link></h1>
       <i class="edit el-icon-edit"></i>
       <div class="user">
         <img class="avatar" src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400" alt="" >

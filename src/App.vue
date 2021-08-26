@@ -23,8 +23,9 @@
 <style lang="scss">
   @import "./assets/common";
 #app{
+
   display:grid;
-  grid-template-columns: 12% auto 12%;
+  grid-template-columns: 12vw auto 12vw;
   grid-template-rows:auto 1fr auto;
   grid-template-areas:'header header header'
                       '.      main   .'

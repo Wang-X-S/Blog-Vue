@@ -1,22 +1,27 @@
 <template>
   <div id="index">
     <section class="blog-posts">
-      <div class="item">
-        <figure class="avatar">
-          <img src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400" alt="">
-          <figcaption>13君</figcaption>
-        </figure>
-        <h3>前端异步大揭秘 <span>3天前</span></h3>
-        <p>本文以一个简单的文件读写为例，讲解了异步的不同写法，包括 普通的 callback、ES2016中的Promise和Generator、 Node 用于解决回调的co 模块、ES2017中的async/await。适合初步接触 Node.js以及少量 ES6语法的同学阅读...</p>
+      <div>
+        <router-link class="item" :to="`/detail/${blog.id}`" v-for="blog in blogs">
+          <figure class="avatar">
+            <img
+              :src="blog.user.avatar"
+              :alt="blog.user.username"/>
+            <figcaption>{{blog.user.username}}</figcaption>
+
+          </figure>
+          <h3>{{blog.title}} <span>{{blog.updatedAt}}</span></h3>
+          <p>{{blog.description}}</p>
+        </router-link>
       </div>
-      <div class="item">
-        <figure class="avatar">
-          <img src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400" alt="">
-          <figcaption>13君</figcaption>
-        </figure>
-        <h3>前端异步大揭秘 <span>3天前</span></h3>
-        <p>本文以一个简单的文件读写为例，讲解了异步的不同写法，包括 普通的 callback、ES2016中的Promise和Generator、 Node 用于解决回调的co 模块、ES2017中的async/await。适合初步接触 Node.js以及少量 ES6语法的同学阅读...</p>
-      </div>
+    </section>
+    <section class="pagination">
+      <el-pagination
+        layout="prev, pager, next"
+        small
+        :total="total/2"
+        @current-change="onPageChanged">
+      </el-pagination>
     </section>
   </div>
 </template>
