@@ -13,11 +13,12 @@ export default {
     this.blogId = this.$route.params.blogId
     blog.getDetail({blogId:this.blogId})
       .then(res=>{
-
+        console.log('这是res')
+        console.log(res)
         this.title=res.data.title
         this.rawContent = res.data.description
         this.createdAt = res.data.createdAt
-        this.user = res.data.user.username
+        this.user = res.data.user
       })
 
   },

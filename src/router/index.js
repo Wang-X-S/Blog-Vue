@@ -22,7 +22,7 @@ const router = new Router({
       component: ()=>import('@/pages/Register/template.vue')
     },
     {
-      path:'/user/:blogId',
+      path:'/user/:userId',
       name:'User',
       component: ()=>import('@/pages/User/template.vue')
     },
