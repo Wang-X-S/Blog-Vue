@@ -10,7 +10,7 @@
             <figcaption>{{blog.user.username}}</figcaption>
 
           </figure>
-          <h3>{{blog.title}} <span>{{blog.updatedAt}}</span></h3>
+          <h3>{{blog.title}} <span>{{friendlyDate(blog.updatedAt)}}</span></h3>
           <p>{{blog.description}}</p>
         </router-link>
       </div>
