@@ -22,8 +22,10 @@
       <div class="user">
 
         <img class="avatar"
-             src="https://static.xiedaimala.com/xdml/image/18934cb8-65cc-4cf9-9387-770d674882b4/2018-6-25-18-46-28.png?imageslim|imageView2/1/w/400/h/400"
-             alt="">
+             :src="user.avatar"
+             :alt="user.username"
+            :title="user.username"
+        >
 
         <ul>
           <li>
