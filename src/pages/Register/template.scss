@@ -1,28 +1,40 @@
-#register {
+@import '../../assets/base.scss';
+
+#login, #register {
   display: grid;
   justify-content: center;
   padding-top: 30px;
 
-  h1, h2 {
-    font-weight: normal;
-    color: red;
+  h4 {
+    margin: 10px 0 5px;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
+  p {
+    margin: 5px 0;
   }
 
   .el-input {
     width: 400px;
   }
+
+  .error {
+    font-size: 12px;
+    color: #f00;
+  }
+  button {
+
+      margin-top: 20px;
+      justify-self: center;
+
+  }
+  .notice{
+    font-size: 12px;
+    color: $textLighterColor;
+    text-align: center;
+    margin-top: 30px;
+    a {
+      color: $themeColor;
+    }
+  }
+
 }

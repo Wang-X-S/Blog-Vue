@@ -44,7 +44,7 @@
   #footer{
 
     grid-area:footer;
-    padding-left:12%;
+
   }
 
 </style>

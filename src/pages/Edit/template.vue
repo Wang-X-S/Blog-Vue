@@ -13,19 +13,19 @@
               maxlength="200"
               show-word-limit
     ></el-input>
-    <p class="msg">限30个字</p>
+    <p class="msg">限200个字</p>
     <h3>文章简介</h3>
     <el-input type="textarea" rows="20" v-model="content"
               :autosize="{ minRows: 10, maxRows: 30}"
               maxlength="1000"
               show-word-limit
     ></el-input>
-    <p class="msg">限30个字</p>
+    <p class="msg">限1000个字</p>
     <p>
       <label >是否展示到首页</label>
       <el-switch
         v-model="atIndex"
-        active-color="#13ce66"
+        active-color="#18a0fb"
         inactive-color="#ff4949">
       </el-switch>
     </p>

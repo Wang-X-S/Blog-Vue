@@ -14,7 +14,7 @@
     </template>
     <template v-if="isLogin">
       <h1>
-        <router-link to="/">Let's share</router-link>
+        <router-link to="/" class="title" >Let's share</router-link>
       </h1>
       <router-link to="/create">
         <i class="edit el-icon-edit"></i>
@@ -88,7 +88,7 @@
     justify-items: center;
 
     h1 {
-      color: #fff;
+      color: white;
       font-size: 40px;
       margin: 60px 0 0 0;
       text-transform: uppercase;
@@ -121,6 +121,9 @@
       font-size: 40px;
       text-transform: uppercase;
       flex: 1;
+      a{
+        color:white
+      }
     }
 
     .edit {

@@ -1,19 +1,15 @@
-body{
-  background:#333
-}
-h1, h2 {
-  font-weight: normal;
-  color:#333;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+@import "../../assets/base";
 
+#edit, #create {
+  padding-bottom: 30px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .msg {
+    text-align: right;
+    font-size: 12px;
+    color: $textLighterColor;
+  }
+}
